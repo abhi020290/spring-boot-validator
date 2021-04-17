@@ -16,8 +16,8 @@ public class EmployeeResource {
     private PropertyBean propertyBean;
 
     @PostMapping("employee")
-    ResponseEntity<String> handleInput(@Valid @RequestBody Employee employee){
-        return ResponseEntity.ok("Success");
+    ResponseEntity<Employee> handleInput(@Valid @RequestBody Employee employee){
+        return ResponseEntity.ok(employee);
     }
 
     @GetMapping("message")
