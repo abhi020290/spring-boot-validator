@@ -1,10 +1,7 @@
 package com.springboot.validator.springbootvalidator.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.ContainerServlet;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,7 +23,7 @@ public class AuthInterceptor implements HandlerInterceptor {
     @Value("${xClient.id.value}")
     String xClientId;
 
-    @Value("#{${rollowedAllowedForClient}}")
+    @Value("#{${rolesAllowedForClient}}")
     private Map<String, String> valuesMap;
 
     @Override

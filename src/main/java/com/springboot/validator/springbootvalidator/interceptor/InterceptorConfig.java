@@ -9,14 +9,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class InterceptorConfig implements WebMvcConfigurer {
 
     @Autowired
-    private LogInteceptor logInteceptor;
+    private LogInterceptor logInterceptor;
 
     @Autowired
     private AuthInterceptor authInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(logInteceptor).addPathPatterns("/*");
+        registry.addInterceptor(logInterceptor).addPathPatterns("/*");
         registry.addInterceptor(authInterceptor).addPathPatterns("/*");
         // registry.addInterceptor(instrumentInterceptor);
     }

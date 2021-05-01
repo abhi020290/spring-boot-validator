@@ -28,3 +28,4 @@ public class EmployeeResource {
         return ResponseEntity.ok(propertyBean.getMessage());
     }
 }
+
